@@ -7,8 +7,39 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
+<style>
+    #frm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    input[type="number"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #ff4081;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #ff669a;
+    }
+</style>
 <body>
 <form id="frm">
+    <img src="https://media.fastcampus.co.kr/wp-content/uploads/2021/02/1_fastcampus_logo_positive_horizontal1_eng@2x.png" style="width: 200px; margin-bottom: 10px;">
     <input type="number" value="10000" name="totalOrderPrice">
     <button type="submit">결제하기</button>
 </form>
