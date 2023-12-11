@@ -1,6 +1,6 @@
 package com.fastcampus.tasteofwork2.pay.controller;
 
-import com.fastcampus.tasteofwork2.pay.vo.AjaxResultVO;
+import com.fastcampus.tasteofwork2.pay.vo.ApiResultVO;
 import com.fastcampus.tasteofwork2.pay.vo.MemberVO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,15 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-
 @RestController
 @Slf4j
 @RequestMapping("/api/fastcampus")
 public class PayRestController {
 
     @PostMapping("/payment")
-    public AjaxResultVO pay(HttpSession session, HttpServletRequest request, HttpServletResponse response, @RequestParam("totalOrderPrice") Integer totalOrderPrice) {
+    public ApiResultVO pay(HttpSession session, HttpServletRequest request, HttpServletResponse response, @RequestParam("totalOrderPrice") Integer totalOrderPrice) {
         log.info("totalOrderPrice:"+totalOrderPrice);
 
         /*임의로 session에 값을 저장*/
